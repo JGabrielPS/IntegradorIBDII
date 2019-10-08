@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Integrador funciones,triggers y procedimientos</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="funciones.js"></script>
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" id="principal">
+          <div class="card">
+            <divv class="card-header"><h5>Inscripcion de alumnos</h5></divv>
+            <div class="card-body">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">DNI del alumno</span>
+                </div>
+                <input type="text" id="dni" class="form-control" /><button
+                  class="btn btn-primary"
+                  type="button"
+                  id="agregarAlumno"
+                  onClick="buscarAlumno()"
+                >
+                  Buscar
+                </button>
+              </div>
+              <div id="sede" class="input-group" hidden>
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Sede</span>
+                </div>
+              </div>
+              <div id="carrera" class="input-group" hidden>
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Carrera</span>
+                </div>
+              </div>
+              <div class="input-group" id="divMateria" hidden>
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Materia</span>
+                </div>
+                <select
+                  name="materia"
+                  class="custom-select"
+                  id="materia"
+                ></select>
+              </div>
+              <div class="input-group mb-3" id="divFechaExamen" hidden>
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Fecha de examen</span>
+                </div>
+                <input type="date" id="fecha_examen" class="form-control" />
+              </div>
+              <div class="input-group mb-3" id="divGuardar" hidden>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onClick="guardarInscripcion()"
+                >
+                  Enviar datos
+                </button>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+  </body>
+</html>
